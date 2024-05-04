@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.0/js/swiper.min.js"></script>
+
+    <title>Document</title>
+
+    <style>
+
+        *{
+            font-family: 'ABCDiatype'!important;
+        }
+       
+
+        .swiper-slide{
+            box-sizing: border-box;
+            width: 157px;
+            height: 350px;
+            /* transition: all;
+            transition-duration: 100ms; */
+    
+        }
+        .swiper-slide img{
+            object-fit: cover;
+        }
+
+
+        
+
+        .swiper-slide button{
+            display: none;
+            bottom: 10px;
+            right: 35%;
+        }
+
+        .swiper-slide-active{
+            height: 390px!important;
+        }
+
+        .swiper-slide-active button{
+            display: block!important;
+        }
+
+        header{
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .four{
+            background-image: url(./imgs/four.svg);
+            background-repeat: no-repeat;
+            background-position-x: 278px;
+        }
+
+        @media (max-width: 768px) {
+            .swiper-wrapper{
+                transform: inherit!important;
+                display: inline-grid!important;
+            }
+            .swiper-slide {
+                display: inline-block!important;
+                width: 100% !important;
+                height: auto;
+            }
+
+            .swiper-slide button {
+                display: block!important;
+                right: 30%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+
+            <!-- <img src="imgs/hero.svg" alt="" class="absolute inset-0 -z-10 w-full object-cover object-right md:object-center"> -->
+            <header style="background-image: url(imgs/hero.svg);">
+                <div>
+                    <nav class="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+                        <div class="flex lg:flex-1">
+                            <a href="#" class="-m-1.5 p-1.5">
+                                <span class="sr-only">Your Company</span>
+                                <img class="h-6 w-auto" src="./imgs/cart.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="flex lg:hidden">
+                            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="hidden lg:flex lg:gap-x-12">
+                            <img class="h-12" src="./imgs/logo.svg" alt="">
+                        </div>
+                        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                            <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
+                        </div>
+                    </nav>
+                </div>
+                <div class="relative isolate py-5 sm:py-32 sm:mt-16 ms-4 sm:ms-0">
+                    <div class="lg:px-8 max-w-6xl mb-16 mx-auto sm:pb-24">
+                        <div class="mx-auto max-w-2xl lg:mx-0">
+                            <h2 class="text-xl sm:text-3xl font-bold tracking-tight text-white">
+                                UN PATRIMOINE EXTRAORDINAIRE <br>
+                                INSUFFLÉ DANS DES SACS QUI <br>
+                                SORTENT DE L’ORDINAIRE
+                            </h2>
+                            <div class="mt-6">
+                                <a href="" class="py-2 px-8 text-[#BF9000] bg-white rounded font-bold sm:text-xl">Commandez dès
+                                    maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <!-- End nav -->
+
+
+        <!-- Products -->
+        <div class="flex justify-center py-10">
+           <div>
+            <h3 class="text-center mb-4 text-3xl font-bold text-[#BF9000]">Découvrez nos sacs</h3>
+            <div class="d-flx mt-5">
+                <a href="" class="py-1 px-5 bg-[#BF9000] text-white rounded font-bold text-lg">Rico hommes</a>
+                <a href="" class="py-1 px-5 bg-[#BF9000] text-white rounded font-bold text-lg">Rica femmes</a>
+            </div>
+           </div>
+        </div>
+
+
+        <!-- Slider main container -->
+        <div class="swiper-container my-10 sm:p-0 p-3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper flex items-center mb-16 gap-4">
+                <!-- Slides -->
+                <div class="swiper-slide relative">
+                    <img class="w-full h-full transition-all duration-1000 rounded-xl drop-shadow-xl" src="./imgs/product-1.png" alt="">
+                    <button class="absolute py-1 px-5 bg-[#BF9000] text-white rounded font-bold text-lg">Commander</button>
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-full transition-all duration-1000 rounded-xl drop-shadow-xl" src="./imgs/product-2.png" alt="">
+                    <button class="absolute py-1 px-5 bg-[#BF9000] text-white rounded font-bold text-lg">Commander</button>
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-full transition-all duration-1000 rounded-xl drop-shadow-xl" src="./imgs/product-3.png" alt="">
+                    <button class="absolute py-1 px-5 bg-[#BF9000] text-white rounded font-bold text-lg">Commander</button>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="sm:flex mt-25 gp-4" >
+            <div class="sm:w-9/12 w-full bg-[#BF9000] sm:p-14 p-4 four">
+                <h2 class="text-8xl text-white text-black"><img src="./imgs/top-hero-text.svg" alt=""></h2>
+                <p class="text-lg text-white mt-4">Découvrez notre toute nouvelle création : Le RICO Briefpack, un sac à dos en cuir magique qui se transforme en
+                    briefcase, et dont vous ne vous passerez plus.</p>
+                <p class="text-lg mt-4 text-white">Magiquement pratique et versatile,notre sac à dos Rico possède de multiples avantages tels que :</p>
+                <ul class="text-lg text-white mt-4 list-disc ms-4">
+                    <li> <strong>Briefcase</strong> pour le contexte professionnel  </li>
+                    <li> <strong>Sac à dos </strong> tendance pour garder vos mains libres</li>
+                    <li><strong>Messenger Bag</strong> pratique pour vos trajets quotidiens</li>
+                    <li><strong>Personnalisable,</strong> rendez unique votre Rico en y inscrivant vos initiales</li>
+                </ul>
+            
+            </div>
+            <div>
+                <img class="h-auto w-full"
+                    src="./imgs/img-1.svg" alt="">
+            </div>
+        </div>
+
+
+        <div class="flex justify-center py-4 my-10">
+            <div>
+                <h3 class="text-center mb-4 text-3xl font-bold text-[#BF9000]">Outfits ideas</h3>
+                <div class="mt-5">
+                    <p class="text-lg text-center text-[#BF9000]">Découvrez nos meilleures idées tenues pour <br> un look élégant et inspirant</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-container-2 swiper-container my-10 sm:p-0 p-3 overflow-hidden">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper flex items-center gap-3">
+                <!-- Slides -->
+                <div class="swiper-slide relative">
+                    <img class="w-full h-full rounded-xl drop-shadow-xl" src="./imgs/product-1.png" alt="">
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-full rounded-xl drop-shadow-xl" src="./imgs/product-2.png" alt="">
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-full rounded-xl drop-shadow-xl" src="./imgs/product-3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="sm:flex m-25">
+            
+            <div class="sm:w-1/2" style="background-image: url('./imgs/four.svg');">
+                <img class=" h-auto w-full" src="./imgs/myb.gif" alt="">
+            </div>
+
+
+            <div class="sm:w-1/2 bg-[#BF9000] flex justify-center items-center py-10">
+                <div class="w-9/12">
+                    <h2 class="text-white text-black mb-4 sm:flex">
+                        <img src="./imgs/hero-text.svg" alt="">
+                        <div class="-ms-10 mt-5 text-center">
+                            #Proudlymoroccan <br>
+                            #miratti
+                        </div>
+                    </h2>
+                    <p class="text-md text-white mt-10 text-center">RICO Viera s’engage à verser 7% de ses bénéfices mensuels aux braves artisans qui convertissent avec passion les
+                    meilleures peaux de vachette en de belles créations artisanales.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="sm:flex">
+        
+            <div class="w-9/12">
+                <div class="bg-gray-600 h-1/2">
+        
+                </div>
+        
+        
+                <div class="bg-gray-300  h-1/2">
+        
+                </div>
+            </div>
+        
+        
+            <div>
+                <img src="./imgs/img-2.svg" class="w-full h-auto" alt="">
+            </div>
+        
+        </div>
+
+
+
+
+        <div class="sm:p-10 p-0 flex justify-center items-center mb-6">
+            <div class="text-center sm:w-9/12">
+                <p class="sm:text-3xl text-lg text-center my-10 font-bold text-[#BF9000]">
+                    Fidèles au travail majestueux de Rico Viera, nous accordons une importance inouïe à la qualité de nos matières
+                    premières, à savoir un cuir et des accessoires <br> irréprochables
+                </p>
+                <a href="" class="py-2 px-8 bg-[#BF9000] text-white rounded font-bold sm:text-xl text-md mt-6 text-center">Commandez dès maintenant</a>
+            </div>
+        </div>
+
+        <div class="py-24 flex justify-center items-center bg-[#BF9000]">
+            <div class="text-center w-9/12 flex justify-center mt-20">
+                <img class="text-center" src="./imgs/footer-text.svg" alt="">
+            </div>
+
+        </div>
+        <p class="text-white px-3 bg-[#BF9000] text-center pb-10">©2024 RICO VIERA. All rights reserved. RICO brand is a property of Ricardo Riviera SARL.</p>
+</body>
+
+<script>
+    var swiperEl = document.querySelector('.swiper-container');
+    var mySwiper = new Swiper(swiperEl, {
+        // Optional parameters
+        slidesPerView: 2.5, // Show 1.5 slides
+        centeredSlides: true, // Center the active slide
+        spaceBetween: 20, // Adjust space between slides
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        initialSlide: 1, // Set the default active slide to the first slide
+
+    });
+
+    const swiper2 = document.querySelector('.swiper-container-2');
+    const mySwiper2 = new Swiper(swiper2, {
+        // Optional parameters
+        slidesPerView: 2.5, // Show 1.5 slides
+        centeredSlides: true, // Center the active slide
+        spaceBetween: 20, // Adjust space between slides
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        initialSlide: 1, // Set the default active slide to the first slide
+
+    });
+</script>
+</html>
